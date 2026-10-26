@@ -1,0 +1,70 @@
+/* Printable request record: removes application chrome and keeps the content. */
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  .sidebar,
+  .topbar,
+  .no-print,
+  .btn,
+  .alert,
+  form {
+    display: none !important;
+  }
+
+  .app,
+  .main,
+  .content {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .print-only {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 9pt;
+  }
+
+  .panel {
+    padding: 0;
+    margin: 0 0 1rem;
+    border: 0;
+    break-inside: avoid;
+  }
+
+  .grid-main {
+    display: block;
+  }
+
+  .table th,
+  .table td,
+  .table-kv th,
+  .table-kv td {
+    padding: 0.3rem 0.4rem;
+    border-color: #999;
+    background: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .badge {
+    color: #000 !important;
+    background: none !important;
+    border: 1px solid #000;
+  }
+}
